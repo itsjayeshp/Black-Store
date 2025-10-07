@@ -1,0 +1,224 @@
+################################
+# General Python/OS Ignores    #
+################################
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# C extensions
+*.so
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Translations
+*.mo
+*.pot
+
+# Operating System Files
+# Files created by various OSes (unnecessary in git)
+.DS_Store
+Thumbs.db
+
+--------------------------------
+
+################################
+# Environments & Dependency Mgmt #
+################################
+
+# Virtual Environments
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Dependency Lock Files (Uncomment if you want to ignore them)
+# Note: It is generally recommended to commit lock files for reproducibility.
+#Pipfile.lock    # pipenv
+#poetry.lock     # poetry
+#pdm.lock        # pdm
+#uv.lock         # uv
+#pixi.lock       # pixi
+
+# Dependency Manager Configuration/Cache
+poetry.toml
+.pdm.toml
+.pdm-python
+.pdm-build/
+.pixi
+
+# PEP 582 (Python local packages)
+__pypackages__/
+
+--------------------------------
+
+################################
+# Distribution / Packaging     #
+################################
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+--------------------------------
+
+################################
+# Framework Specific Ignores     #
+################################
+
+### Django ###
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Uncomment to ignore collected static files (common for production setup)
+# staticfiles/
+
+### Flask ###
+instance/
+.webassets-cache
+
+### Scrapy ###
+.scrapy
+
+--------------------------------
+
+################################
+# Testing & Coverage             #
+################################
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+--------------------------------
+
+################################
+# Documentation & Notebooks    #
+################################
+
+# Sphinx documentation
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# mkdocs documentation
+/site
+
+--------------------------------
+
+################################
+# Build Tools & Utilities        #
+################################
+
+# PyInstaller
+*.manifest
+*.spec
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Type Checkers & Linters
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/          # Pyre type checker
+.pytype/        # pytype static type analyzer
+.ruff_cache/    # Ruff stuff
+
+# Cython debug symbols
+cython_debug/
+
+--------------------------------
+
+################################
+# IDE/Editor Configuration       #
+################################
+
+# PyCharm (JetBrains)
+# Uncomment to ignore the entire folder:
+#.idea/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# Visual Studio Code
+# Uncomment to ignore the entire folder:
+# .vscode/
+
+# Cursor (AI-powered editor)
+.cursorignore
+.cursorindexingignore
+
+# Abstra (AI-powered process automation)
+.abstra/
+
+--------------------------------
+
+################################
+# Other Utilities                #
+################################
+
+# pyenv
+# Uncomment if you want to commit your environment version:
+# .python-version
+
+# PyPI configuration file
+.pypirc
+
+# Marimo
+marimo/_static/
+marimo/_lsp/
+__marimo__/
