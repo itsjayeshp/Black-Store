@@ -54,16 +54,21 @@ ROOT_URLCONF = "foodOnline_main.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
-        "APP_DIRS": True,
+        "DIRS": [
+            BASE_DIR / "templates",  # Using pathlib (Django 3.1+)
+            # or 
+            # os.path.join(BASE_DIR, 'templates'),  # Using os.path
+        ],
+        "APP_DIRS": True,  # Look for templates in each app's "templates" folder
         "OPTIONS": {
             "context_processors": [
+                "django.template.context_processors.debug",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
         },
-    },
+    }
 ]
 
 WSGI_APPLICATION = "foodOnline_main.wsgi.application"
