@@ -25,6 +25,14 @@
         "documentation": {}
     },
     {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -79,7 +87,7 @@
         "kind": 5,
         "importPath": "foodOnline_main.foodOnline_main.settings",
         "description": "foodOnline_main.foodOnline_main.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-*dt=3tgg0ud1q==9vx-%b%boo19zjd3cb-a-d(+@6fs-16(i9x\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = config('SECRET_KEY')\nDEBUG = config('DEBUG',case=bool)\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "foodOnline_main.foodOnline_main.settings",
         "documentation": {}
     },
@@ -88,7 +96,7 @@
         "kind": 5,
         "importPath": "foodOnline_main.foodOnline_main.settings",
         "description": "foodOnline_main.foodOnline_main.settings",
-        "peekOfCode": "SECRET_KEY = \"django-insecure-*dt=3tgg0ud1q==9vx-%b%boo19zjd3cb-a-d(+@6fs-16(i9x\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\nDEBUG = config('DEBUG',case=bool)\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
         "detail": "foodOnline_main.foodOnline_main.settings",
         "documentation": {}
     },
@@ -97,7 +105,7 @@
         "kind": 5,
         "importPath": "foodOnline_main.foodOnline_main.settings",
         "description": "foodOnline_main.foodOnline_main.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "peekOfCode": "DEBUG = config('DEBUG',case=bool)\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
         "detail": "foodOnline_main.foodOnline_main.settings",
         "documentation": {}
     },
@@ -151,7 +159,7 @@
         "kind": 5,
         "importPath": "foodOnline_main.foodOnline_main.settings",
         "description": "foodOnline_main.foodOnline_main.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"foodOnline_main.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = \"foodOnline_main.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    # \"default\" is the alias for the primary database connection.\n    \"default\": {\n        # Specifies the database backend driver for PostgreSQL.\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        # The name of the database to connect to.\n        \"NAME\": config('DB_NAME'),",
         "detail": "foodOnline_main.foodOnline_main.settings",
         "documentation": {}
     },
@@ -160,7 +168,7 @@
         "kind": 5,
         "importPath": "foodOnline_main.foodOnline_main.settings",
         "description": "foodOnline_main.foodOnline_main.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    # \"default\" is the alias for the primary database connection.\n    \"default\": {\n        # Specifies the database backend driver for PostgreSQL.\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        # The name of the database to connect to.\n        \"NAME\": config('DB_NAME'),\n        # The username for the database user.\n        \"USER\": config('DB_USER'),\n        # The password for the database user.",
         "detail": "foodOnline_main.foodOnline_main.settings",
         "documentation": {}
     },
